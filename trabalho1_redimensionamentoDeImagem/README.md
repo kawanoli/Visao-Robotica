@@ -1,4 +1,6 @@
-# Aprendizados obtidos:
+# Trabalho 1 de Visão Robótica - Redimensionamento de imagens
+
+## Aprendizados obtidos:
 Além de treinar a criação de uma imagem em branco, e o recebimento de uma imagem com o imread,
 eu aprendi algumas nuances da linguagem que eu não havia prestado atenção até então.
 Percebi que assim como no JS, você precisa converter o tipo de dado recebido de um input do
@@ -45,6 +47,12 @@ Aqui, eu estou mixando no mesmo código tanto a redução com KNN tanto a reduç
 
 Esse código tem como objetivo reduzir uma imagem utilizando duas técnicas de redimensionamento: o vizinho mais próximo (KNN) e a média dos vizinhos.
 
+
+| ![image](https://github.com/user-attachments/assets/4bdf2461-4cd5-42b6-95d4-c747c74fab41) | ![image](https://github.com/user-attachments/assets/32a41557-ff17-41ec-9429-6b69ebb454c3) |
+|:--:|:--:|
+> Imagens reduzida para 0.1
+
+
 ### Como funciona o código?
 
 1. **Importação de bibliotecas e carregamento da imagem**:
@@ -78,6 +86,9 @@ Esse código tem como objetivo reduzir uma imagem utilizando duas técnicas de r
 - A primeira execução do programa, estava me retornando o aumento da forma certa, porém sem preencher os quadrados, então precisei pensar em uma forma de completar o código.
 - Decidi então complementar o que faltava no código com as funções nativas do OpenCV
 
+![image](https://github.com/user-attachments/assets/6a0fe06b-4d32-4567-973c-f0a44ff4ab96)
+> Primeira versão e execução do código; o mesmo, não preenchia todo o espaço criado, gerando essa sensação de imagem escurecida
+
 ### Como funciona o código?
 
 1. Importação de bibliotecas e carregamento da imagem
@@ -106,6 +117,9 @@ Esse código tem como objetivo reduzir uma imagem utilizando duas técnicas de r
 ### 9. Visualização das imagens
 - Utilizando Matplotlib, o código cria uma figura com três subplots: a imagem original, a imagem interpolada de ordem zero e a imagem interpolada de ordem um.
 - As imagens são convertidas do formato BGR (utilizado pelo OpenCV) para RGB (utilizado pelo Matplotlib) para correta exibição.
+
+![image](https://github.com/user-attachments/assets/363196b8-b6eb-4572-ba8e-7dd6a1e9891f)
+> Perceba, que a interpolação de ordem 1, ainda deixou a imagem um pouco escurecida, devido à escolha de qual seria o pixel representativo
 
 ### Considerações Finais
 - Desta forma, consegui solucionar o problema que faltava, que era "pintar" os quadrados que sobravam.
